@@ -1,0 +1,17 @@
+{
+  "name": "dynamic_icu_lost",
+  "extends": "base_example.json",
+  "description": "After the first plan is made, a 2nd critical patient arrives and ICU1 becomes unavailable before P1's transfer. Agent must re-reason, re-search, re-plan.",
+  "events": [
+    {"t": 2, "type": "patient_arrival", "patient": {
+      "id": "P4", "age": 80,
+      "vitals": {"hr": 140, "sbp": 78, "spo2": 84, "temp": 38.9, "rr": 30},
+      "history": [
+        {"t": 1, "hr": 120, "sbp": 95, "spo2": 90, "temp": 38.5, "rr": 24},
+        {"t": 2, "hr": 140, "sbp": 78, "spo2": 84, "temp": 38.9, "rr": 30}
+      ],
+      "symptoms": ["ShortnessOfBreath", "Confusion"]
+    }},
+    {"t": 3, "type": "resource_unavailable", "id": "ICU1"}
+  ]
+}

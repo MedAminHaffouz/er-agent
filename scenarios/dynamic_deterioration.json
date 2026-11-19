@@ -1,0 +1,9 @@
+{
+  "name": "dynamic_deterioration",
+  "extends": "base_example.json",
+  "description": "P2 deteriorates after the first plan. DL re-run should flip P2 to High/Critical and trigger re-allocation.",
+  "events": [
+    {"t": 2, "type": "vitals_update", "pid": "P2", "vitals": {"hr": 118, "sbp": 96, "spo2": 91, "temp": 39.3, "rr": 25}},
+    {"t": 3, "type": "vitals_update", "pid": "P2", "vitals": {"hr": 130, "sbp": 86, "spo2": 88, "temp": 39.6, "rr": 28}}
+  ]
+}

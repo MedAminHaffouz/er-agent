@@ -1,0 +1,55 @@
+{
+  "name": "base_example",
+  "description": "End-to-end example from the project brief: 3 patients, 2 doctors, 2 emergency beds, 1 ICU bed.",
+  "patients": [
+    {
+      "id": "P1", "age": 72,
+      "vitals": {"hr": 132, "sbp": 84, "spo2": 87, "temp": 39.0, "rr": 26},
+      "history": [
+        {"t": 1, "hr": 105, "sbp": 110, "spo2": 95, "temp": 38.4, "rr": 20},
+        {"t": 2, "hr": 112, "sbp": 105, "spo2": 93, "temp": 38.6, "rr": 22},
+        {"t": 3, "hr": 118, "sbp": 98,  "spo2": 91, "temp": 38.8, "rr": 23},
+        {"t": 4, "hr": 125, "sbp": 90,  "spo2": 89, "temp": 39.0, "rr": 25},
+        {"t": 5, "hr": 132, "sbp": 84,  "spo2": 87, "temp": 39.0, "rr": 26}
+      ],
+      "symptoms": ["ChestPain", "ShortnessOfBreath"]
+    },
+    {
+      "id": "P2", "age": 45,
+      "vitals": {"hr": 95, "sbp": 122, "spo2": 96, "temp": 38.6, "rr": 18},
+      "history": [
+        {"t": 1, "hr": 92, "sbp": 124, "spo2": 97, "temp": 38.3, "rr": 17},
+        {"t": 2, "hr": 94, "sbp": 121, "spo2": 96, "temp": 38.5, "rr": 18},
+        {"t": 3, "hr": 95, "sbp": 122, "spo2": 96, "temp": 38.6, "rr": 18}
+      ],
+      "symptoms": ["Fever"]
+    },
+    {
+      "id": "P3", "age": 30,
+      "vitals": {"hr": 82, "sbp": 125, "spo2": 98, "temp": 37.1, "rr": 16},
+      "history": [
+        {"t": 1, "hr": 84, "sbp": 124, "spo2": 98, "temp": 37.0, "rr": 16},
+        {"t": 2, "hr": 82, "sbp": 125, "spo2": 98, "temp": 37.1, "rr": 16}
+      ],
+      "symptoms": ["AbdominalPain"]
+    }
+  ],
+  "doctors": [
+    {"id": "D1", "specialty": "Cardiology", "available": true},
+    {"id": "D2", "specialty": "General", "available": true}
+  ],
+  "nurses": [
+    {"id": "N1", "available": true}
+  ],
+  "beds": [
+    {"id": "EB1", "type": "Emergency", "available": true},
+    {"id": "EB2", "type": "Emergency", "available": true},
+    {"id": "ICU1", "type": "ICU", "available": true}
+  ],
+  "events": [],
+  "expected": {
+    "P1": {"risk": "Critical", "bed": "ICU1", "doctor": "D1"},
+    "P2": {"risk": "Medium",   "bed": "Emergency", "doctor": "D2"},
+    "P3": {"risk": "Low",      "bed": "Emergency or deferred"}
+  }
+}
