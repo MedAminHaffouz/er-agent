@@ -25,7 +25,7 @@ Label `risk ∈ {Low, Medium, High, Critical}`:
 - [ ] trajectory types: stable, slow deterioration, fast deterioration, recovery, noisy-stable
 - [ ] label = risk class derived from trajectory (not only last step)
 - [ ] **include pairs with identical last-step vitals but different trends** (key DL vs ML experiment)
-- [ ] deliver by **Nov 19**
+- [ ] deliver by **Nov 21**
 
 ## 2. Preprocessing
 - [ ] train/val/test split **stratified**, fixed seed
@@ -68,7 +68,7 @@ def predict_ml(patient: dict) -> tuple[str, float]:   # Contract 6 patient → (
 ## Deadlines
 | Date | Deliverable |
 |------|-------------|
-| **Nov 19** | both datasets generated + pushed (or generator) |
+| **Nov 21** | both datasets generated + pushed (or generator) |
 | Nov 22 | models trained, `predict_ml` merged |
 | Nov 26 | full evaluation + calibration + tuning |
 | Nov 28 | (bonus) DT → rules |

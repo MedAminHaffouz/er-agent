@@ -76,7 +76,7 @@ One clear paragraph + example: Search (M5) picks the **target configuration** (*
 ## Deadlines
 | Date | Deliverable |
 |------|-------------|
-| Nov 19 | `World` + `to_facts()` + discretization merged (M3 & M4 need it) |
+| Nov 21 | `World` + `to_facts()` + discretization merged (M3 & M4 need it) |
 | Nov 21 | events + `apply_action` |
 | Nov 23 | action schemas + forward planner + validate |
 | Nov 26 | planner A* + tests + extra scenarios |
