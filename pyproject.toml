@@ -15,6 +15,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest", "ruff"]
+real = ["openpyxl"]   # bonus: real KTAS data (er_agent.learning.real_data)
 
 [build-system]
 requires = ["setuptools>=61"]
