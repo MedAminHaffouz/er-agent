@@ -1,0 +1,102 @@
+{
+  "_doc": "Learned Horn rules (DT on discretized facts). Regenerate: python -m er_agent.learning.ml.rules_export",
+  "variable": "?x",
+  "rules": [
+    {
+      "name": "Learned_R1",
+      "premises": [
+        [
+          "HasSymptom",
+          "?x",
+          "ChestPain"
+        ],
+        [
+          "Tachycardia",
+          "?x"
+        ]
+      ],
+      "conclusion": [
+        "HighRisk",
+        "?x"
+      ],
+      "val_precision": 0.868,
+      "test_precision": 0.867,
+      "support_val": 38
+    },
+    {
+      "name": "Learned_R2",
+      "premises": [
+        [
+          "HasSymptom",
+          "?x",
+          "ShortnessOfBreath"
+        ],
+        [
+          "Tachycardia",
+          "?x"
+        ]
+      ],
+      "conclusion": [
+        "HighRisk",
+        "?x"
+      ],
+      "val_precision": 0.863,
+      "test_precision": 0.821,
+      "support_val": 51
+    },
+    {
+      "name": "Learned_R3",
+      "premises": [
+        [
+          "Tachypnea",
+          "?x"
+        ]
+      ],
+      "conclusion": [
+        "HighRisk",
+        "?x"
+      ],
+      "val_precision": 0.861,
+      "test_precision": 0.85,
+      "support_val": 72
+    },
+    {
+      "name": "Learned_R4",
+      "premises": [
+        [
+          "LowBloodPressure",
+          "?x"
+        ]
+      ],
+      "conclusion": [
+        "HighRisk",
+        "?x"
+      ],
+      "val_precision": 0.821,
+      "test_precision": 0.784,
+      "support_val": 67
+    },
+    {
+      "name": "Learned_R5",
+      "premises": [
+        [
+          "HasSymptom",
+          "?x",
+          "ChestPain"
+        ],
+        [
+          "HasSymptom",
+          "?x",
+          "ShortnessOfBreath"
+        ]
+      ],
+      "conclusion": [
+        "HighRisk",
+        "?x"
+      ],
+      "val_precision": 0.818,
+      "test_precision": 0.795,
+      "support_val": 44
+    }
+  ]
+}
