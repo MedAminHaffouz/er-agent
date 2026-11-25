@@ -1,0 +1,214 @@
+{
+  "min_precision": 0.7,
+  "min_support": 20,
+  "min_lower_bound": 0.6,
+  "max_depth": 5,
+  "thresholds": {
+    "AGE_ELDERLY": 65,
+    "HR_TACHY": 110,
+    "RR_HIGH": 24,
+    "SBP_LOW": 90,
+    "SPO2_LOW": 90,
+    "TEMP_FEVER": 38.5
+  },
+  "rules": [
+    {
+      "premises": [
+        "ChestPain",
+        "Tachycardia"
+      ],
+      "conclusion": "HighRisk",
+      "val": {
+        "support": 38,
+        "precision": 0.868421052631579,
+        "recall": 0.14798206278026907,
+        "precision_lower95": 0.7267282994850113
+      },
+      "name": "Learned_R1",
+      "test": {
+        "support": 45,
+        "precision": 0.8666666666666667,
+        "recall": 0.17488789237668162
+      }
+    },
+    {
+      "premises": [
+        "ShortnessOfBreath",
+        "Tachycardia"
+      ],
+      "conclusion": "HighRisk",
+      "val": {
+        "support": 51,
+        "precision": 0.8627450980392157,
+        "recall": 0.19730941704035873,
+        "precision_lower95": 0.7427804765736838
+      },
+      "name": "Learned_R2",
+      "test": {
+        "support": 56,
+        "precision": 0.8214285714285714,
+        "recall": 0.2062780269058296
+      }
+    },
+    {
+      "premises": [
+        "Tachypnea"
+      ],
+      "conclusion": "HighRisk",
+      "val": {
+        "support": 72,
+        "precision": 0.8611111111111112,
+        "recall": 0.27802690582959644,
+        "precision_lower95": 0.7628660215842661
+      },
+      "name": "Learned_R3",
+      "test": {
+        "support": 80,
+        "precision": 0.85,
+        "recall": 0.30493273542600896
+      }
+    },
+    {
+      "premises": [
+        "LowBloodPressure"
+      ],
+      "conclusion": "HighRisk",
+      "val": {
+        "support": 67,
+        "precision": 0.8208955223880597,
+        "recall": 0.24663677130044842,
+        "precision_lower95": 0.712522863873702
+      },
+      "name": "Learned_R4",
+      "test": {
+        "support": 88,
+        "precision": 0.7840909090909091,
+        "recall": 0.3094170403587444
+      }
+    },
+    {
+      "premises": [
+        "ChestPain",
+        "ShortnessOfBreath"
+      ],
+      "conclusion": "HighRisk",
+      "val": {
+        "support": 44,
+        "precision": 0.8181818181818182,
+        "recall": 0.16143497757847533,
+        "precision_lower95": 0.6803916324485767
+      },
+      "name": "Learned_R5",
+      "test": {
+        "support": 44,
+        "precision": 0.7954545454545454,
+        "recall": 0.15695067264573992
+      }
+    }
+  ],
+  "test": {
+    "learned": {
+      "CriticalRisk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "fires": 0
+      },
+      "HighRisk": {
+        "precision": 0.7389162561576355,
+        "recall": 0.672645739910314,
+        "fires": 203
+      }
+    },
+    "hand_R1_R2_R6": {
+      "CriticalRisk": {
+        "precision": 1.0,
+        "recall": 0.18461538461538463,
+        "fires": 12
+      },
+      "HighRisk": {
+        "precision": 0.9166666666666666,
+        "recall": 0.14798206278026907,
+        "fires": 36
+      }
+    },
+    "learned_plus_hand": {
+      "CriticalRisk": {
+        "precision": 1.0,
+        "recall": 0.2153846153846154,
+        "fires": 14
+      },
+      "HighRisk": {
+        "precision": 0.7401960784313726,
+        "recall": 0.6771300448430493,
+        "fires": 204
+      }
+    }
+  },
+  "hand_rule_stats_test": {
+    "R1": {
+      "support": 24,
+      "precision": 0.875
+    },
+    "R2": {
+      "support": 18,
+      "precision": 1.0
+    },
+    "R6": {
+      "support": 12,
+      "precision": 1.0
+    }
+  },
+  "real": {
+    "learned": {
+      "CriticalRisk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "fires": 0
+      },
+      "HighRisk": {
+        "precision": 0.6153846153846154,
+        "recall": 0.1951219512195122,
+        "fires": 78
+      }
+    },
+    "hand_R1_R2_R6": {
+      "CriticalRisk": {
+        "precision": 0.5,
+        "recall": 0.038461538461538464,
+        "fires": 2
+      },
+      "HighRisk": {
+        "precision": 1.0,
+        "recall": 0.016260162601626018,
+        "fires": 4
+      }
+    },
+    "per_rule": {
+      "Learned_R1": {
+        "support": 2,
+        "precision": 0.5,
+        "recall": 0.0040650406504065045
+      },
+      "Learned_R2": {
+        "support": 9,
+        "precision": 0.5555555555555556,
+        "recall": 0.02032520325203252
+      },
+      "Learned_R3": {
+        "support": 54,
+        "precision": 0.5370370370370371,
+        "recall": 0.11788617886178862
+      },
+      "Learned_R4": {
+        "support": 23,
+        "precision": 0.9565217391304348,
+        "recall": 0.08943089430894309
+      },
+      "Learned_R5": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    }
+  }
+}
